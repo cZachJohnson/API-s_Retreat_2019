@@ -1,0 +1,84 @@
+ 
+========================================================
+autosize: true
+transition: rotate
+transition-speed: slow
+<center>
+# <b>Reproducible Data Collection:</b><br>
+# An Overview of APIs in R<br>
+Zach Johnson<br>
+December 2nd, 2019</center>
+
+
+What is an API?
+========================================================
+- Application Programming Interface
+- Allows applications and software to communicate with one another
+- The code that governs the access point(s) for the server
+- Returns data in response to a request made by a client
+
+
+***
+![API Wall Socket](API_Pres-figure/api.png)
+https://www.sendeasy.co.za/wp-content/uploads/2018/04/api.png
+
+
+Types of APIs
+========================================================
+Many different interface or communication protocol 
+- web-based system
+- operating system
+- database system
+- computer hardware
+- software library
+
+
+
+Networkable APIs: Web-based system
+========================================================
+Web service APIs
+often an HTTP request sent to a server
+
+
+scalable
+platform independent
+
+often returns data in JSON or XML
+
+
+
+Why use an API?
+========================================================
+- How would you document the steps you took to retrieve a data download from website such as 
+
+
+- The number of public APIs listed on apihound hovers around 50,000
+
+insert citation
+
+there are currently 13 different population estimates for 2011 at the county level
+this citation doesnt document which estimate was used
+does the userof the data know what estimate was used
+
+R Packages
+========================================================
+- <b>over 340 API wrapper packages on cran</b> <br>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/US-Census-TIGERLogo.svg/1200px-US-Census-TIGERLogo.svg.png)
+
+***
+![](https://luminfire.com/wp-content/uploads/2017/12/GeoServer_Logo.png)
+![](https://miro.medium.com/max/1200/1*kztic04DuZU5Cg8TqQ4QMw.png)
+![](https://wrcc.dri.edu/monitor/nev-mon/PRISM.png)
+
+geoknife Example
+========================================================
+![](API_Pres-figure/Geoknife.JPG)
+
+geoknife Example
+========================================================
+
+
+
+```
+Error in webdata("prism") : could not find function "webdata"
+```

@@ -1,0 +1,65 @@
+install.packages("geoknife", 
+                 repos = c("https://owi.usgs.gov/R","https://cran.rstudio.com/"),
+                 dependencies = TRUE)
+
+
+
+
+library(tigris)
+library(magrittr)
+library(dplyr)
+library(sf)
+library(geoknife)
+
+##### Gather Brazos County Boundary #####
+brazos <- counties(state = "Texas",
+                   year = 2011, 
+                   class = "sf")
+
+brazos <- brazos %>% 
+  filter(NAME %in% "Brazos")
+
+brazos %>% 
+  st_geometry() %>%
+  plot()
+
+brazos <- st_transform(x = brazos, 
+                       crs = CRS("+proj=longlat +datum=WGS84")) %>%
+  as_Spatial()
+##### Build geoknife request #####
+stencil <- simplegeom(brazos,  proj4string = CRS("+proj=longlat +datum=WGS84"))
+
+
+
+
+
+
+
+
+library(swirl)
+
+% browseVignettes() to view view installed package vignettes
+
+
+
+% Gather Brazos County Boundary
+% ========================================================
+  % ```{r, warning = FALSE, message = FALSE, error = FALSE}
+% library(tigris)
+% library(magrittr)
+% library(dplyr)
+% library(sf)
+% 
+% brazos <- counties(state = "Texas",
+                     %                    year = 2011, 
+                     %                    class = "sf")
+% 
+% brazos <- brazos %>% 
+%   filter(NAME %in% "Brazos")
+%   
+% brazos %>% 
+%   st_geometry() %>%
+%   plot()
+% ```
+
+
